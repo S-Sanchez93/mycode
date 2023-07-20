@@ -9,11 +9,11 @@ print("A.challenge them to a duel.\nB.assassinate them.")
 answer= input(">").lower()
 
 if answer == "a":
-   a= "The proper way we do things here."
+    a= "The proper way we do things here."
 
 else:
-   a= "Is that how they do things in the west? cowards arent welcome."
-   
+    a= "Is that how they do things in the west? cowards arent welcome."
+    
 print(a)
 
 print("Next question,You find a wounded sliver dog in the street,how do you respond?")
