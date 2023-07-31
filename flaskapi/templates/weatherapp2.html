@@ -1,0 +1,22 @@
+<!-- weather.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Welcome to Sal's basic Weather App</h1>
+    <form method="post" action="/">
+        <label for="zip">Enter your zip code:</label>
+        <input type="text" name="zip" id="zip" required>
+        <input type="submit" value="Get Weather">
+    </form>
+    {% if weather_data %}
+        <h2>Weather for {{ weather_data['name'] }}</h2>
+        <p>Temperature: {{ weather_data['main']['temp'] }} °C</p>
+        <p>Humidity: {{ weather_data['main']['humidity'] }}%</p>
+        <p>Weather: {{ weather_data['weather'][0]['description'] }}</p>
+    {% endif %}
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <form action="/" method="POST">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" required>
+        <label for="description">Description (250 characters or less):</label>
+        <input type="text" id="description" name="description" maxlength="250">
+        <button type="submit">Add Task</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task['content'] }} - {{ task['description'] }}
+            <a href="{{ url_for('complete', task_id=loop.index0) }}">Mark as Completed</a>
+            <a href="{{ url_for('delete', task_id=loop.index0) }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
