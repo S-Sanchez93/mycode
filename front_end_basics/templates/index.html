@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask and JavaScript Example</title>
+</head>
+<body>
+    <h1>Flask and JavaScript Example</h1>
+    <button id="myButton">Click Me</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            var messageElement = document.getElementById("message");
+            messageElement.innerHTML = "Button Clicked!";
+        });
+    </script>
+</body>
+</html>
+
